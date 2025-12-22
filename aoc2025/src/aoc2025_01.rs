@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use aoclib::{ParseLine, Runner, output};
+use aoclib::{ParseLine, Runner, output, read_lines};
 
 pub struct Aoc2025_01 {
     start_point: isize,
@@ -23,7 +23,7 @@ impl Runner for Aoc2025_01 {
 
     fn parse(&mut self) {
         let name = self.name();
-        let lines = aoclib::read_lines(format!("inputs/{}_{}.txt", name.0, name.1));
+        let lines = read_lines(format!("inputs/{}_{}.txt", name.0, name.1));
         self.turns = lines.parse_lines();
     }
 

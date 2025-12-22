@@ -1,16 +1,20 @@
 use aoclib::{Runner, Selector, run_solution};
 
 mod aoc2025_01;
+mod aoc2025_02;
 
 use aoc2025_01::*;
+use aoc2025_02::*;
 
 fn main() {
-    run_2025(Selector::One(1));
+    run_2025(Selector::One(2));
 }
 
 fn run_2025(which: Selector) {
     let mut day01 = Aoc2025_01::new();
-    let mut days: Vec<&mut dyn Runner> = vec![&mut day01];
+    let mut day02 = Aoc2025_02::new();
+
+    let mut days: Vec<&mut dyn Runner> = vec![&mut day01, &mut day02];
     match which {
         Selector::All => {
             for d in days {
