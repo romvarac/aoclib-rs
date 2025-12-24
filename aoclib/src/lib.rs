@@ -7,8 +7,10 @@ use std::{
 };
 
 pub fn read_to_chars<T: AsRef<Path>>(pathname: T) -> Vec<char> {
-    let data = read_to_string(pathname).expect("unable to open file");
-    data.chars().collect()
+    read_to_string(pathname)
+        .expect("unable to open file")
+        .chars()
+        .collect()
 }
 
 pub fn read_single_line<T: AsRef<Path>>(pathname: T) -> Vec<char> {
