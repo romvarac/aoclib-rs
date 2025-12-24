@@ -3,18 +3,18 @@ use std::str::FromStr;
 use aoclib::{Runner, output, read_lines};
 
 #[derive(Default)]
-pub struct Aoc2055_05 {
+pub struct Aoc2025_05 {
     ranges: Vec<Range>,
     ingredients: Vec<usize>,
 }
 
-impl Aoc2055_05 {
+impl Aoc2025_05 {
     pub fn new() -> Self {
         Self::default()
     }
 }
 
-impl Runner for Aoc2055_05 {
+impl Runner for Aoc2025_05 {
     fn name(&self) -> (usize, usize) {
         (2025, 5)
     }
